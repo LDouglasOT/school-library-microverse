@@ -10,6 +10,7 @@ end
 # Represents a decorator for a Nameable object.
 class Decorator < Nameable
   def initialize(nameable)
+    super()
     @nameable = nameable
   end
 
