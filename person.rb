@@ -33,7 +33,6 @@ class Person < Nameable
     
   end
 
-
 person = Person.new(12)
 
 person.correct_name
