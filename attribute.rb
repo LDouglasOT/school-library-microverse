@@ -1,0 +1,89 @@
+# frozen_string_literal: true
+
+# Represents a classroom.
+class Classroom
+  attr_accessor :label, :students
+
+  def initialize(label)
+    @label = label
+    @students = []
+  end
+
+  def add_student(student)
+    students << student
+    student.classroom = self
+  end
+end
+
+class Student
+  attr_accessor :name, :classroom
+
+  def initialize(name)
+    @name = name
+    @classroom = nil
+  end
+end
+
+class Book
+  attr_accessor :title, :author
+
+  def initialize(title, author)
+    @title = title
+    @author = author
+  end
+end
+
+class Rental
+  attr_accessor :date, :book, :person
+
+  def initialize(date, book, person)
+    @date = date
+    @book = book
+    @person = person
+  end
+end
+
+class Person
+  attr_accessor :name, :rentals
+
+  def initialize(name)
+    @name = name
+    @rentals = []
+  end
+
+  def rent_book(book, date)
+    rental = Rental.new(date, book, self)
+    rentals << rental
+    book.rentals << rental
+  end
+end
+
+# Block to test the different classes
+
+# Create a classroom
+classroom = Classroom.new("Class A")
+
+# Create students
+student1 = Student.new("John")
+student2 = Student.new("Emily")
+
+# Add students to the classroom
+classroom.add_student(student1)
+classroom.add_student(student2)
+
+# Check the classroom label and students
+puts "Classroom: #{classroom.label}"
+puts "Students: #{classroom.students.map(&:name).join(", ")}"
+
+# Create a book
+book = Book.new("Title", "Author")
+
+# Create a person
+person = Person.new("Alice")
+
+# Rent the book
+person.rent_book(book, "2023-06-30")
+
+# Check the person's rentals
+puts "Person: #{person.name}"
+puts "Rentals: #{person.rentals.map { |rental| "#{rental.book.title} (#{rental.date})" }.join(", ")}"
