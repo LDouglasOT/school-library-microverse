@@ -15,6 +15,7 @@ class Classroom
   end
 end
 
+# Represents a Student.
 class Student
   attr_accessor :name, :classroom
 
@@ -24,6 +25,7 @@ class Student
   end
 end
 
+# Represents a Book.
 class Book
   attr_accessor :title, :author
 
@@ -33,6 +35,7 @@ class Book
   end
 end
 
+# Represents a Rental.
 class Rental
   attr_accessor :date, :book, :person
 
@@ -43,6 +46,7 @@ class Rental
   end
 end
 
+# Represents a Person.
 class Person
   attr_accessor :name, :rentals
 
