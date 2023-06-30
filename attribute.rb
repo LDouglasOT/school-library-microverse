@@ -79,9 +79,6 @@ classroom.add_student(student2)
 puts "Classroom: #{classroom.label}"
 puts "Students: #{classroom.students.map(&:name).join(", ")}"
 
-# Create a book
-book = Book.new("Title", "Author")
-
 # Create a person
 person = Person.new("Alice")
 
