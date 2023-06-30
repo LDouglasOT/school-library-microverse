@@ -85,8 +85,6 @@ book = Book.new("Title", "Author")
 # Create a person
 person = Person.new("Alice")
 
-# Rent the book
-person.rent_book(book, "2023-06-30")
 
 # Check the person's rentals
 puts "Person: #{person.name}"
