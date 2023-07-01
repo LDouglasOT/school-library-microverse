@@ -80,11 +80,14 @@ puts "Classroom: #{classroom.label}"
 puts "Students: #{classroom.students.map(&:name).join(", ")}"
 
 # Create a person
-person = Person.new("Alice")
-
+book = Book.new("The Great Gatsby", "F. Scott Fitzgerald")
+person = Person.new("John")
 # Create a rental between the book and the person
 rental = Rental.new("2023-06-29", book, person)
+# Accessing the rental's date, book, and person
+puts rental.date # Output: 2023-06-29
+puts rental.book.inspect # Output: #<Book:0x00007ff4a69531f0 @title="The Great Gatsby", @author="F. Scott Fitzgerald">
+puts rental.person.inspect # Output: #<Person:0x00007ff4a6952f80 @name="John">
 
 # Check the person's rentals
 puts "Person: #{person.name}"
-puts "Rentals: #{person.rentals.map { |rental| "#{rental.book.title} (#{rental.date})" }.join(", ")}"
