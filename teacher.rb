@@ -1,5 +1,6 @@
 require_relative 'person'
 
+# Represents teacher
 class Teacher < Person
   attr_accessor :id, :specialization
 

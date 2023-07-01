@@ -1,5 +1,6 @@
 require_relative 'person'
 
+# Represents student
 class Student < Person
   attr_reader :id, :classroom
 

@@ -2,6 +2,7 @@
 
 require_relative "decorator"
 
+#  Represents trimmer
 class TrimmerDecorator < Decorator
   MAX_LENGTH = 10
 

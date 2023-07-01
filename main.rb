@@ -12,6 +12,7 @@ MENU_OPTIONS = {
   0 => { label: "Quit", method: nil }
 }.freeze
 
+# Represents main entry
 def main
   app = App.new
 

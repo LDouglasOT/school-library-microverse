@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+# Represents book
 class Book
   attr_accessor :title, :author, :rentals
 

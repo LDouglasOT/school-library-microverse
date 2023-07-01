@@ -2,6 +2,7 @@
 
 require_relative "nameable"
 
+# Represents decorator class
 class Decorator < Nameable
   attr_accessor :nameable
 

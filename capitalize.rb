@@ -2,6 +2,7 @@
 
 require_relative "Decorator"
 
+# Represents CapitalizeDecorator
 class CapitalizeDecorator < Decorator
   def correct_name
     super.Capitalize
