@@ -82,6 +82,9 @@ puts "Students: #{classroom.students.map(&:name).join(", ")}"
 # Create a person
 person = Person.new("Alice")
 
+# Create a rental between the book and the person
+rental = Rental.new("2023-06-29", book, person)
+
 # Check the person's rentals
 puts "Person: #{person.name}"
 puts "Rentals: #{person.rentals.map { |rental| "#{rental.book.title} (#{rental.date})" }.join(", ")}"
