@@ -1,4 +1,6 @@
-require_relative 'decorator'
+# frozen_string_literal: true
+
+require_relative "decorator"
 
 class TrimmerDecorator < Decorator
   MAX_LENGTH = 10

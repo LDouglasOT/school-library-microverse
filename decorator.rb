@@ -1,4 +1,6 @@
-require_relative 'nameable'
+# frozen_string_literal: true
+
+require_relative "nameable"
 
 class Decorator < Nameable
   attr_accessor :nameable
